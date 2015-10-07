@@ -10,6 +10,10 @@
   <td><%= @post.content %></td>
 </tr>
 <tr>
+  <th>Tag list</th>
+  <td><%= tag_icons @post.tag_list %></td>
+</tr>
+<tr>
   <th>Created at</th>
   <td><%= @post.created_at %></td>
 </tr>
