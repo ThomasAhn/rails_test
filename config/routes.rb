@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
   root 'welcome#index'
 
   resources :posts do
@@ -12,8 +10,9 @@ Rails.application.routes.draw do
   end
 
   #get 'welcome/contact'
-  get 'about'   => 'welcome#about'
+  get 'about' => 'welcome#about'
   get 'contact' => 'welcome#contact'
+  get 'signup' => 'users#new'
 
   #get 'welcome/index'
 
