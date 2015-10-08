@@ -38,6 +38,10 @@
               </ul>
             </li>
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Log in",   '#' %></li>
+            <li><%= link_to "Sign in", '#' %></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -45,6 +49,7 @@
     <div class="container">
       <%= render partial: "shared/flash_messages", flash: flash %>
       <%= content_for?(:post_layout) ? content_for(:post_layout) : yield %>
+      <%= render 'layouts/footer' %>
     </div> <!-- /container -->
 </body>
 
