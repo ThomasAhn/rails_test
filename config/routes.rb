@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'contact' => 'welcome#contact'
   get 'signup' => 'users#new'
 
+  resources :users
+  
   #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
