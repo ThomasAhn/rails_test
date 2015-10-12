@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   root 'welcome#index'
 
   resources :posts do
@@ -13,9 +15,13 @@ Rails.application.routes.draw do
   get 'about' => 'welcome#about'
   get 'contact' => 'welcome#contact'
   get 'signup' => 'users#new'
+  get 'login'   => 'sessions#new'
+  post 'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
 
   resources :users
-  
+
   #get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
