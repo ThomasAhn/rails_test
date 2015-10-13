@@ -12,11 +12,13 @@ Bulletin.create! title: '새소식'
 Bulletin.create! title: '가입인사', post_type: 'blog'
 Bulletin.create! title: '갤러리', post_type: 'gallery'
 
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true)
+User.create!(name:  "Thomas Ahn",
+             email: "thomas.ahn@touchworks.co.kr",
+             password:              "gusrud0821",
+             password_confirmation: "gusrud0821",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -25,5 +27,7 @@ User.create!(name:  "Example User",
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end

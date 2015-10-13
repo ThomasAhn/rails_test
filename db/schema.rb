@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012045523) do
+ActiveRecord::Schema.define(version: 20151013011746) do
 
   create_table "bulletins", force: :cascade do |t|
     t.string   "title"
@@ -61,16 +61,7 @@ ActiveRecord::Schema.define(version: 20151012045523) do
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-    t.string   "remember_digest"
-    t.boolean  "admin"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
 end
